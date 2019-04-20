@@ -1,0 +1,108 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+#body {
+  background-color: lightblue;
+  font-family: "Open Sans", sans-serif;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 0;
+  color: rgb(68, 68, 68);
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+
+}
+#title{
+  text-align: center;
+  color: red;
+  font-weight: bold;
+
+}
+#description{
+  text-align: center;
+  color:orange
+ 
+}
+
+.box {
+  background-color: lightblue;
+}
+
+.box-green {
+  height:100px;
+  width:150px;
+  margin-bottom: 50px;
+  background-color: aquamarine;
+  position: relative;
+  
+}
+.box-red {
+  width: 150px;
+  height: 100px;
+  margin-bottom: 50px;
+  background-color:orangered;
+}
+.box-yellow {
+  width: 150px;
+  height: 100px;
+  margin-bottom: 50px;
+  background-color:yellow;
+}
+    
+.footer {
+  position: fixed;
+  font-weight: bold;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+#green-text {
+  position: absolute;
+  top: 50%;
+}
+#refresh {
+  position: absolute;
+  right: 250px;
+  bottom: 80px;
+}
+
+#Submit {
+  position: absolute;
+  right: 50px;
+  bottom: 80px;
+
+}
+.selected{
+  background-color: greenyellow;
+
+}
+.button {
+  background-color: #FF9100;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#correct {
+  color: white;
+  font-weight: bold;
+
+}
+#answer{
+  color: white;
+  position: absolute;
+  bottom: 80px;
+  font-size: 30px;
+  text-decoration: underline;
+
+}

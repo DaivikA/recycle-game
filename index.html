@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thimble Sample</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </head>
+  <body id="body">
+    <h1 id="title">Recycling Game </h1>
+    <h4 id="description">This game will teach you what and what not to recycle</h4>
+
+<input class = "button" id="refresh" type="button" value="Go Back" onClick="location.href=location.href" >
+<button type="button" id="Submit" class="button" onclick="submitButton()">Submit Answer</button>
+<p id="correct" style="visibility: hidden">Correct!</p>
+<p id="answer" >0 of 3</p>
+
+
+    <div id="table" class="container box">
+      <div class="row justify-content-md-center">
+        <div id="green-container" class="col-md-auto text-center" onclick="clickBox(0)">
+          <div class="box-green" id="box-green">
+            <div id = "green-text">
+              Banana Peel
+            </div>
+          </div>
+          <img src="images/banana peel.jpeg" width="150" alt="Banana Peel" id="green-image" />
+        </div> 
+        <div id="red-container" class="col-md-auto text-center " onclick="clickBox(1)">
+          <div class="box-red" id="box-red" >
+            <div id="red-text">
+              Water Bottle
+            </div>
+          </div>
+          <img src="images/water-bottle.jpeg" width="150" alt="Water Bottle" id="red-image"/>
+        </div>
+        <div id="yellow-container" class="col-md-auto text-center " onclick="clickBox(2)">
+          <div class="box-yellow" id="box-yellow">
+            <div id="yellow-text">
+              Clothing
+            </div>       
+          </div>
+          <img src="images/clothing.png" width="150" alt="Clothing" id="yellow-image">
+        </div>
+      </div>
+    </div>
+
+<div class="footer">
+  <p>By Daivik Acharya</p>
+</div>
+
+
+  </body>
