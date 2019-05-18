@@ -12,13 +12,34 @@
     <script src="script.js"></script>
   </head>
   <body id="body">
+    <div class="login">
+      <label>Login</label>
+      <form name="login" onsubmit="validatelogin()">
+        Username:<br>
+        <input type = "text" name = "username"></input>
+        <br>
+        Password:<br>
+        <input type = "text" name = "password"></input>
+        <input type = "submit"></input>
+
+
+      </form>
+      
+
+
+      
+    </div>
     <h1 id="title">Recycling Game </h1>
     <h4 id="description">This game will teach you what and what not to recycle</h4>
+    <a id="link:schedule" href="schedule.html">Schedule</a>
+    <a id="link:schedule" href="quiz.html">Quiz</a>
+    <a id="link:schedule" href="guide.html">Guide</a>
+
 
 <input class = "button" id="refresh" type="button" value="Go Back" onClick="location.href=location.href" >
 <button type="button" id="Submit" class="button" onclick="submitButton()">Submit Answer</button>
 <p id="correct" style="visibility: hidden">Correct!</p>
-<p id="answer" >0 of 3</p>
+<p id="answer" >0 of 4</p>
 
 
     <div id="table" class="container box">

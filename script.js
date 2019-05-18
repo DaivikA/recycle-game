@@ -1,10 +1,10 @@
-var answers = [1,0, 0]
+var answers = [1,0, 0,2]
 var round = 0
-var roundWin = 2
+var roundWin = 3
 var selectedAnswer = -1
-var images = [["images/banana peel.jpeg", "images/water-bottle.jpeg", "images/clothing.png"],["images/cardboard.png", "images/bag.jpg", "images/spoon.jpg"], ["images/glass.png", "images/food.png","images/electronics.png"]]
+var images = [["images/banana peel.jpeg", "images/water-bottle.jpeg", "images/clothing.png"],["images/cardboard.png", "images/bag.jpg", "images/spoon.jpg"], ["images/glass.png", "images/food.png","images/electronics.png"],["images/towel.jpg","images/styrofoam.jpg", "images/can.jpg" ]]
 
-var id = [["banana", "waterbottle", "clothing"], ["cardboard", "plastic shopping bags", "plastic utensils"],["glass", "food", "electronics"]]
+var id = [["banana", "waterbottle", "clothing"], ["cardboard", "plastic shopping bags", "plastic utensils"],["glass", "food", "electronics"],["towel","styrofoam", "can"]]
 
 var boxid = ["box-green", "box-red", "box-yellow"]
 
@@ -84,7 +84,7 @@ function submitButton(){
     win.src = "images/win.jpg";
     win.height = 500;
     table.appendChild(win);
-    document.getElementById("answer").innerHTML = "3 of 3"
+    document.getElementById("answer").innerHTML = "4 of 4"
   }
   else if(answers[round] == selectedAnswer){
     document.getElementById(boxid[selectedAnswer]).classList.remove("selected");
@@ -95,13 +95,19 @@ function submitButton(){
     document.getElementById('green-text').innerHTML = id[round][0]
     document.getElementById('red-text').innerHTML = id[round][1]
     document.getElementById('yellow-text').innerHTML = id[round][2]
+
     document.getElementById("correct").style.visibility = "visible";
-    document.getElementById("answer").innerHTML = round + " of 3";
+    document.getElementById("answer").innerHTML = round + " of 4";
+
+
+
+
+
   } else{
     var table = document.getElementById('table');
     deleteTable()
     var wrong = document.createElement('img');
-    wrong.src = "images/wrong.jpg"
+    wrong.src = "images/tryagain.png"
     table.appendChild(wrong);
     document.getElementById("correct").style.visibility = "hidden";
     document.getElementById("answer").style.visibility = "hidden";
@@ -121,3 +127,12 @@ function deleteTable(){
 window.onload = function(){
   init();
 };
+
+function validatelogin(){
+  var form = document.forms["login"];
+  console.log(form);
+  var username = form["username"].value
+  var password = form["password"].value
+  console.log(username);
+  console.log(password);
+}

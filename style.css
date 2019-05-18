@@ -37,8 +37,7 @@ h1 {
   width:150px;
   margin-bottom: 50px;
   background-color: aquamarine;
-  position: relative;
-  
+ vertical-align: middle;
 }
 .box-red {
   width: 150px;
@@ -64,8 +63,6 @@ h1 {
   text-align: center;
 }
 #green-text {
-  position: absolute;
-  top: 50%;
 }
 #refresh {
   position: absolute;
@@ -104,5 +101,18 @@ h1 {
   bottom: 80px;
   font-size: 30px;
   text-decoration: underline;
+
+}
+.login{
+position: absolute;
+display:block;
+top: 50%;
+left: 50%;
+height: 200px;
+width: 300px;
+background-color: white;
+margin-left: -150px;
+margin-top: -150px;
+z-index: 3;
 
 }
