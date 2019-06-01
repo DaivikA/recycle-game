@@ -130,9 +130,22 @@ window.onload = function(){
 
 function validatelogin(){
   var form = document.forms["login"];
-  console.log(form);
   var username = form["username"].value
   var password = form["password"].value
-  console.log(username);
-  console.log(password);
+  
+  const http = new XMLHttpRequest();
+  const url = "http://localhost:8000/login";
+  http.open ("GET", url);
+  var request = {
+	  username: username,
+	  password: password
+  }
+  http.send(request);
+  http.onreadystatechange = function(){
+	  if (this.readyState == 4 && this.status == 200){
+		  console.log('hello');
+	  }
+	  
+  }
+  return false;
 }
