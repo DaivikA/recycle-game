@@ -129,6 +129,7 @@ window.onload = function(){
 };
 
 function validatelogin(){
+  console.log("Logging in");
   var form = document.forms["login"];
   var username = form["username"].value
   var password = form["password"].value

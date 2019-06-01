@@ -33,9 +33,9 @@ app.get("/login", (req, res)=>{
 		if (data && data.infexOf('{') > -1) {
 			req.body = JSON.parse(data);
 			console.log(req.body);
-		}
+		}// read params
+		console.log(data)
 	});
-	console.log(req.data);
 	con.query("SELECT * FROM users", function (err, result, fields){
 		if(err) throw err;
 		
