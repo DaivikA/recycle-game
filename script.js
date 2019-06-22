@@ -135,8 +135,8 @@ function validatelogin(){
   var password = form["password"].value
   
   const http = new XMLHttpRequest();
-  const url = "http://localhost:8000/login";
-  http.open ("GET", url);
+  const url = "http://localhost:8000/login?username" + username + "&password=" + password;
+  http.open ("POST", url);
   var request = {
 	  username: username,
 	  password: password

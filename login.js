@@ -1,7 +1,8 @@
 var mysql = require('mysql');
 var express = require('express');
 var app = express();
-var bodyparser = require('body-parser');
+const bodyParser = require('body-parser')
+
 
 var con = mysql.createConnection({
 	host: "localhost",
@@ -19,28 +20,30 @@ con.connect(function(err){
 app.listen(8000, () => {
 	console.log('app is listneing');
 });
-
-app.use(bodyparser.json());
-app.get("/login", (req, res)=>{
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+)
+app.use(bodyParser.json());
+app.get("/login", (req, res, next)=>{
 	//use body-parser
+	/*
 	var data = ""
-	req.on('data', (chunk)=>{
+	res.on('data', (chunk)=>{
 		data+= chunk
 	});
-	
-	req.on('end', () => {
-		req.rawBody = data;
-		if (data && data.infexOf('{') > -1) {
-			req.body = JSON.parse(data);
-			console.log(req.body);
-		}// read params
-		console.log(data)
-	});
-	con.query("SELECT * FROM users", function (err, result, fields){
+	console.log(data);
+	res.on('end', () => {
+		console.log(JSON.parse(data));
+		con.query("SELECT * FROM users", function (err, result, fields){
 		if(err) throw err;
 		
 	});
+	  });
 	
+	*/
+	console.log(req)
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	res.send('hello');
